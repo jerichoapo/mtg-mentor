@@ -6,6 +6,11 @@ in order.
 **74 articles across six blocks. Built 2026-08-30.** Every file records its source URL, publication, author, publish date, and
 retrieval status in YAML frontmatter.
 
+**Looking for an idea rather than an article:** [concept-index-2026-09-06.md](concept-index-2026-09-06.md).
+It traces every major concept across all six blocks in the order the argument developed, so you can see who
+coined a term, who corrected it, and where it stands now. The blocks give you a reading order; the index
+gives you the other axis.
+
 **How this was built, and what you can rely on:** [architecture-2026-08-30.md](architecture-2026-08-30.md).
 It documents the frontmatter contract, the seven-tier recovery pipeline, the verification script, the known
 gaps, and the conventions for anything added later.
