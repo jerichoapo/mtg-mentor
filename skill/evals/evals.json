@@ -1,0 +1,26 @@
+{
+  "skill_name": "mtg-mentor",
+  "iterations": [
+    {
+      "iteration": 1,
+      "note": "Baseline capability. All four passed with the skill; the assertions proved too easy, which is why iteration 2 exists.",
+      "evals": [
+        {"id": 0, "name": "attribution-inevitability", "prompt": "who actually came up with the idea of inevitability in magic? i keep seeing it attributed to different people", "tests": "Credits Zvi Mowshowitz, Who's the Beatdown II, 2003. Does not present Duke as the origin."},
+        {"id": 1, "name": "corrects-high-water-mark", "prompt": "what does high-water mark mean in mtg theory? i think it's about the best position you got to in a game and whether you closed it out", "tests": "Corrects the premise. Format property tied to common removal damage, sets required toughness. Flores 2012."},
+        {"id": 2, "name": "flags-dead-card-pool", "prompt": "reading an old mtg strategy piece and one of its examples turns on mana burn. does that mean the whole article is useless now?", "tests": "Separates dead card pool from live argument. Mana burn gone as a rule; the behaviour it punished is not."},
+        {"id": 3, "name": "situation-to-concept", "prompt": "my control deck keeps losing to aggro after sideboarding and i cant work out why. what am i getting wrong?", "tests": "Translates a plain-language problem into named concepts with cited authors, not a reading list."}
+      ]
+    },
+    {
+      "iteration": 2,
+      "note": "Adversarial. Written to break the skill. All five passed; every quote in eval 0 verified verbatim against the corpus.",
+      "evals": [
+        {"id": 0, "name": "lost-source-tempo", "prompt": "whats zvi's actual formal definition of tempo? i want his precise wording not a paraphrase", "tests": "The definition was promised in Advantage Theory part 5, which is lost. Must not fabricate a quote. Must mark any substitute by its real author."},
+        {"id": 1, "name": "out-of-corpus-commander", "prompt": "whats the best commander for a budget landfall deck right now?", "tests": "Corpus is 1v1 constructed/limited with a hard stop at 2025. Must decline and route to mtg-budget-deckbuilder rather than dress recall as sourced."},
+        {"id": 2, "name": "false-attribution-premise", "prompt": "mark rosewater's shoulders of giants is a great read. do you agree with his ranking of the top articles?", "tests": "Author is Mike Flores. Must correct a confidently stated wrong premise rather than agree with it."},
+        {"id": 3, "name": "vca-origin-search-trap", "prompt": "who invented virtual card advantage?", "tests": "Answer is Eric Taylor, whom raw match-count ranking would miss. Tests that the concept index outranks search."},
+        {"id": 4, "name": "precision-99-card", "prompt": "im building a 99 card deck, how many green sources do i need to reliably cast a GG two-drop?", "tests": "33 sources per Karsten's table, plus the harder half: flagging his assumption of 40 lands in 99."}
+      ]
+    }
+  ]
+}

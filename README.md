@@ -6,6 +6,10 @@ in order.
 **74 articles across six blocks. Built 2026-08-30.** Every file records its source URL, publication, author, publish date, and
 retrieval status in YAML frontmatter.
 
+**Want to ask it questions instead of reading it:** [skill/](skill/README.md) is a Claude
+skill that answers from this corpus, cites the article, and flags what has gone stale. One
+copy command to install, no runtime dependencies.
+
 **Looking for an idea rather than an article:** [concept-index-2026-09-06.md](concept-index-2026-09-06.md).
 It traces every major concept across all six blocks in the order the argument developed, so you can see who
 coined a term, who corrected it, and where it stands now. The blocks give you a reading order; the index
