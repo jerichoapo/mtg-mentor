@@ -42,6 +42,7 @@ developer mode, which is why this is a copy rather than something cleverer.
 | `scripts/corpus.sh` | Every lookup. POSIX sh over grep and sed, no runtime dependency. |
 | `references/corpus-map.md` | What each block holds, what has gone stale, and the four corrections most often repeated wrongly. |
 | `evals/evals.json` | The nine test cases across two iterations, with what each one probes. |
+| `starter-questions-2026-09-06.md` | Questions the corpus answers well, grouped by what you want, plus what it will decline. |
 
 **No Python.** The machine this was built on has only the Microsoft Store stub, so the
 script deliberately uses nothing beyond POSIX tools. That also makes it portable.
