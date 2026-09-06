@@ -10,6 +10,9 @@ retrieval status in YAML frontmatter.
 skill that answers from this corpus, cites the article, and flags what has gone stale. One
 copy command to install, no runtime dependencies.
 
+**Want it taught rather than indexed:** [the-book-2026-09-06.md](the-book-2026-09-06.md) is the whole library
+synthesised into one document, organised by what you need to learn rather than by who wrote it.
+
 **Looking for an idea rather than an article:** [concept-index-2026-09-06.md](concept-index-2026-09-06.md).
 It traces every major concept across all six blocks in the order the argument developed, so you can see who
 coined a term, who corrected it, and where it stands now. The blocks give you a reading order; the index
