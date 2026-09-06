@@ -6,8 +6,8 @@ source_url: https://magic.wizards.com/en/articles/archive/lo/threats-and-answers
 archive_url: https://web.archive.org/web/20221103051314/https://magic.wizards.com/en/articles/archive/lo/threats-and-answers-2014-09-08
 publication: DailyMTG / Level One
 retrieved: 2026-08-30
-retrieval_status: wayback
-retrieval_note: "Live URL returns a soft 404 (HTTP 200 with Wizards' error page). Recovered from the Internet Archive snapshot dated 2022-11-03."
+retrieval_status: live
+retrieval_note: "Was a soft 404 (HTTP 200 with Wizards' error page) when this copy was made; the text below came from the Internet Archive snapshot dated 2022-11-03. Re-checked 2026-08-31: Wizards has restored the article and now redirects source_url to /en/news/feature/threats-and-answers-2014-09-08, and serves an honest 404 for slugs that do not exist. archive_url is retained as the provenance of this reconstruction, not as the current recovery path."
 block: 1 — The spine
 course_position: 15
 section: Concepts of Gameplay — Part 2

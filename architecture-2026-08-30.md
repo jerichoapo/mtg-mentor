@@ -62,8 +62,8 @@ again.**
 
 | Status | Count | Meaning |
 |---|---|---|
-| `live` | 61 | fetched from the publisher, still up |
-| `wayback` | 8 | original is dead, recovered from the Internet Archive |
+| `live` | 61 → **64** | fetched from the publisher, still up |
+| `wayback` | 8 → **5** | original is dead, recovered from the Internet Archive |
 | `live (ClassicDojo mirror)` | 1 | publisher gone, community mirror survives |
 | `live (PDF, 11 pages)` | 1 | text extracted locally from a PDF |
 | `live via Wayback capture` | 1 | page is live, but the version that mattered was archived |
@@ -95,7 +95,9 @@ Tried in order, per source:
 
 ### Four failure modes a naive scraper swallows silently
 
-**Soft 404s.** `magic.wizards.com` serves **HTTP 200 with an error-page body** for dead articles. Status-code
+**Soft 404s.** *(Fixed by the publisher on or before 2026-08-31 — see the second addendum. The failure mode
+is real and general; this particular demonstration of it is now historical.)*
+`magic.wizards.com` serves **HTTP 200 with an error-page body** for dead articles. Status-code
 link checking reports perfect health. Three Level One installments were dead and looked fine. **The only
 reliable detection is fetching the page and reading its title.** This generalizes well past this project.
 
@@ -249,3 +251,34 @@ with title, author, date and ID in a single request** — and revealed that the 
 under a different name than every citation uses. **Look for the publisher's own index before probing.** One
 detail: the category was `Strategy: General`, not `General`, which is a separate and much smaller bucket; the
 first query returned an empty result set and nearly closed the search.
+
+---
+
+## Addendum, 2026-08-31: the soft-404 evidence expired one day later
+
+Recorded because it is the sharpest possible illustration of why `retrieval_status` exists.
+
+**`magic.wizards.com` no longer serves soft 404s.** Verified 2026-08-31 by automated re-resolution of every
+`source_url` in this corpus. Wizards has rebuilt the site:
+
+- `/en/articles/archive/<section>/<slug>` now **redirects** to `/en/news/feature/<slug>`, serving the
+  restored article. The three Level One installments recorded here as dead are readable again at their
+  original addresses, and the returned pages carry the real prose, not a slug-derived title on an error
+  shell — checked against article content, not just the `<title>`.
+- Nonexistent slugs now return an **honest HTTP 404** titled `404 | Magic: The Gathering`, on both the old
+  and new paths.
+
+Those three files are now `retrieval_status: live`. Each keeps its `archive_url`, because that snapshot is
+still where its text came from; the `retrieval_note` in each records the whole sequence.
+
+**What this does not mean.** The soft-404 failure mode is not solved and is not rare — this publisher simply
+stopped exhibiting it. What expired is the *evidence*, not the problem. Anything built to detect soft 404s
+now needs its positive cases from somewhere other than this corpus.
+
+**The transferable lesson.** A retrieval status is a measurement with a timestamp, not a property of a URL.
+This one had a useful life of **one day**. The `retrieved` field is what makes that legible, and it is the
+argument for re-resolving a corpus on a schedule rather than trusting a status recorded once.
+
+Found by `dev/revenant`, which resolves every `source_url` in this corpus and reports entries whose recorded
+status disagrees with the live web. It classifies this as stale ground truth rather than as its own error —
+a distinction worth keeping in anything that scores itself against labels.

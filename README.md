@@ -254,15 +254,25 @@ table.
 
 ## Dead links and recoveries
 
-**Three Level One installments return a *soft 404*** — Wizards serves **HTTP 200** with an error page, so
-`curl` reports success and only a real page fetch detects the failure. All three were recovered from the
-Internet Archive and are marked `retrieval_status: wayback` with their snapshot dates.
+**Three Level One installments returned a *soft 404*** when this corpus was built — Wizards served
+**HTTP 200** with an error page, so `curl` reported success and only a real page fetch detected the
+failure. All three were recovered from the Internet Archive at the snapshots below, which is where the
+text in those files still comes from.
 
-| Installment | Snapshot |
-|---|---|
-| 01 What is Magic? | 2022-08-10 |
-| 14 Symmetric Effects | 2022-10-15 |
-| 15 Threats and Answers | 2022-11-03 |
+**This is no longer true.** Re-checked **2026-08-31**: Wizards has rebuilt the site. It now redirects
+`/en/articles/archive/<section>/<slug>` to `/en/news/feature/<slug>` with the article restored, and
+returns an honest **HTTP 404** titled `404 | Magic: The Gathering` for slugs that do not exist. All three
+are marked `retrieval_status: live`; each keeps its `archive_url` as the provenance of its reconstruction
+rather than as a current recovery path.
+
+| Installment | Reconstructed from snapshot | Live again since |
+|---|---|---|
+| 01 What is Magic? | 2022-08-10 | verified 2026-08-31 |
+| 14 Symmetric Effects | 2022-10-15 | verified 2026-08-31 |
+| 15 Threats and Answers | 2022-11-03 | verified 2026-08-31 |
+
+The soft-404 failure mode is still real and still worth detecting — it is simply no longer demonstrated by
+this publisher. See the addendum in `architecture-2026-08-30.md`.
 
 **Four more articles had no live source at all.** Brainburst is gone, its TCGplayer republication is gone,
 and ChannelFireball's archive now returns a JavaScript shell with no article body. Each was located by

@@ -6,8 +6,8 @@ source_url: https://magic.wizards.com/en/articles/archive/lo/symmetric-effects-2
 archive_url: https://web.archive.org/web/20221015204002/https://magic.wizards.com/en/articles/archive/lo/symmetric-effects-2014-09-01
 publication: DailyMTG / Level One
 retrieved: 2026-08-30
-retrieval_status: wayback
-retrieval_note: "Live URL returns a soft 404 (HTTP 200 with Wizards' error page). Recovered from the Internet Archive snapshot dated 2022-10-15, which carries the full text, byline, and date stamp."
+retrieval_status: live
+retrieval_note: "Was a soft 404 (HTTP 200 with Wizards' error page) when this copy was made; the text below came from the Internet Archive snapshot dated 2022-10-15, which carries the full text, byline, and date stamp. Re-checked 2026-08-31: Wizards has restored the article and now redirects source_url to /en/news/feature/symmetric-effects-2014-09-01, and serves an honest 404 for slugs that do not exist. archive_url is retained as the provenance of this reconstruction, not as the current recovery path."
 block: 1 — The spine
 course_position: 14
 section: Concepts of Gameplay — Part 2
